@@ -158,3 +158,9 @@ SELECT species.name, COUNT(*)
   GROUP BY species.name
   ORDER BY COUNT(*) DESC
   LIMIT 1;
+
+SELECT COUNT(*) FROM visits where animal_id = 4;
+CREATE INDEX visits_animal_id ON visits(animal_id);
+
+SELECT * FROM visits where vet_id = 2;
+CREATE INDEX visits_vet_id ON visits(vet_id);

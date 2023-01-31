@@ -164,3 +164,11 @@ CREATE INDEX visits_animal_id ON visits(animal_id);
 
 SELECT * FROM visits where vet_id = 2;
 CREATE INDEX visits_vet_id ON visits(vet_id);
+
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+CREATE INDEX owners_email ON owners(email);
+
+DROP INDEX visits_vet_id;
+
+CREATE INDEX visits_vet_id ON visits(vet_id);
+-- Screenshot added in pull request's description

@@ -107,3 +107,7 @@ INSERT INTO visits (vet_id, animal_id, date_of_visit) VALUES( (SELECT id FROM ve
 INSERT INTO visits (vet_id, animal_id, date_of_visit) VALUES( (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), (SELECT id FROM animals WHERE name = 'Blossom'), 'May 24, 2020');
 
 INSERT INTO visits (vet_id, animal_id, date_of_visit) VALUES( (SELECT id FROM vets WHERE name = 'William Tatcher'), (SELECT id FROM animals WHERE name = 'Blossom'), 'Jan 11, 2021');
+
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';

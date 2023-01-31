@@ -26,6 +26,9 @@
 
 > Vet Clinic Database is a database that contains data about animals
 
+# Entity Relationship Diagram
+<img src="./images/Diagram.png">
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
